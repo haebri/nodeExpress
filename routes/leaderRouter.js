@@ -26,8 +26,7 @@ router
     res.end('Will send details of the leader: ' + req.params.leaderId +' to you!');
 })
 .post('/:leaderId', (req, res) => {
-    res.statusCode = 403;
-    res.end('POST operation not supported on /leaders/'+ req.params.leaderId);
+    res.end('Will add the leader: ' + req.body.name + ', id: ' +req.params.leaderId + ' with details: ' + req.body.description);
 })
 .put('/:leaderId', (req, res) => {
     res.write('Updating the leader: ' + req.params.leaderId + '\n');

@@ -26,8 +26,7 @@ router
     res.end('Will send details of the dish: ' + req.params.dishId +' to you!');
 })
 .post('/:dishId', (req, res) => {
-    res.statusCode = 403;
-    res.end('POST operation not supported on /dishes/'+ req.params.dishId);
+    res.end('Will add the dish: ' + req.body.name + ', id: ' +req.params.dishId + ' with details: ' + req.body.description);
 })
 .put('/:dishId', (req, res) => {
     res.write('Updating the dish: ' + req.params.dishId + '\n');

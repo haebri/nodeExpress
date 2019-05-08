@@ -26,8 +26,7 @@ router
     res.end('Will send details of the promotion: ' + req.params.promotionId +' to you!');
 })
 .post('/:promotionId', (req, res) => {
-    res.statusCode = 403;
-    res.end('POST operation not supported on /promotions/'+ req.params.promotionId);
+    res.end('Will add the promotion: ' + req.body.name + ', id: ' + req.params.promotionId + ' with details: ' + req.body.description);
 })
 .put('/:promotionId', (req, res) => {
     res.write('Updating the promotion: ' + req.params.promotionId + '\n');
